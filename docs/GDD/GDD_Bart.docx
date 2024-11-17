@@ -1,0 +1,93 @@
+Un **Game Design Document (GDD)** organiza todos los elementos del juego, desde la narrativa hasta las mecánicas de jugabilidad. Para incluir los movimientos y mecánicas mencionados, puedes crear secciones específicas en el GDD. Aquí hay un ejemplo de cómo estructurarlo:
+
+---
+
+## **Game Design Document: Bart vs. The Shinning**
+
+---
+
+### **Gameplay Mechanics**
+
+#### **Movement**
+- **Walk:** Bart moves at a standard pace, suitable for precise platforming.
+- **Run:** Bart moves at a slightly faster pace. Useful for dodging enemies or covering distances quickly.
+- **Jump:** Bart can leap to reach higher platforms or evade obstacles.
+- **Skateboarding:**  
+  - When Bart picks up his skateboard, his speed increases significantly.
+  - Skateboarding allows Bart to break certain obstacles or cover long distances faster, but it reduces his control slightly.  
+  - Stamina drains while using the skateboard, and it requires donuts to recharge.
+
+---
+
+#### **Item Collection**
+Bart can collect and use various tools to assist him in his journey:
+
+1. **Tools:**  
+   - **Flashlight:** Lights up dark areas, allowing Bart to see hidden platforms and enemies.  
+     - Requires batteries to function.  
+   - **Slingshot:** Bart’s primary weapon for attacking enemies.  
+     - Ammunition: Marbles scattered throughout the levels.  
+   - **Skateboard:** Found in specific levels or as a collectible. Allows Bart to move faster and perform special tricks.  
+
+2. **Consumables:**  
+   - **Donuts:** Restore Bart's stamina and grant bonus points.  
+   - **Batteries:** Recharge the flashlight's power.  
+   - **Marbles:** Used as ammo for the slingshot.
+
+---
+
+### **Control Scheme**
+
+| **Action**      | **Input**                   |
+|------------------|-----------------------------|
+| Move Left/Right  | Arrow Keys (←, →)          |
+| Jump             | Spacebar                   |
+| Run              | Shift + Arrow Keys         |
+| Skateboard       | S (toggle on/off)          |
+| Use Flashlight   | F (toggle on/off)          |
+| Fire Slingshot   | Ctrl or Left Mouse Click   |
+| Collect Item     | Walk over item             |
+
+---
+
+### **Game Loop Integration**
+
+1. **Level Start:** Bart begins at the starting point of each level with basic abilities (walking, running, and jumping).  
+2. **Exploration:**  
+   - Players navigate the level, collecting items like batteries, marbles, donuts, and tools.
+   - Certain areas require the flashlight to illuminate dark spaces.  
+   - The skateboard can be used for speed challenges or to escape chasing enemies.  
+3. **Combat and Puzzle-Solving:**  
+   - Bart uses the slingshot to defeat enemies or trigger distant switches.  
+   - Items collected (like batteries or marbles) are essential to progress.  
+
+4. **Completion:** Players complete the level by reaching a goal, solving a puzzle, or defeating a boss.
+
+---
+
+### **User Interface (UI)**
+
+- **HUD Elements:**  
+   - **Health Bar:** Indicates Bart's health.  
+   - **Stamina Bar:** Displays the stamina remaining for the skateboard.  
+   - **Flashlight Battery:** Shows remaining flashlight power.  
+   - **Inventory:** Displays collected marbles, donuts, and tools.
+
+---
+
+### **Narrative Integration**
+
+- Items like the flashlight, skateboard, and slingshot are tied to the narrative. For example:  
+   - Bart finds his slingshot in the attic, where Lisa is trapped.  
+   - The skateboard is discovered in the mansion’s garage, fitting with Bart’s personality.  
+
+---
+
+### **Technical Implementation Notes**
+
+- **Physics for Movement:**  
+  Implement variable gravity and momentum for Bart’s skateboarding to simulate acceleration and deceleration.  
+- **Inventory System:**  
+  Design a simple system where players can track tools and consumables.  
+
+
