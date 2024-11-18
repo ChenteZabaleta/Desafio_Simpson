@@ -67,3 +67,4 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
         heroe->keyReleaseEvent(event);
     }
 }
+//
