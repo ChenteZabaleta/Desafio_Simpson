@@ -8,7 +8,13 @@
 class Heroe : public Personaje {
 public:
     // Constructor y destructor
-    Heroe(int id, const QPointF& pos, const QRectF& geom, float masa, const QString& spritePath, bool vis = true, QGraphicsItem* parent = nullptr);
+    Heroe(int id,
+          const QPointF& pos,
+          const QRectF& geom,
+          float masa,
+          const QString& spritePath,
+          bool vis = true,
+          QGraphicsItem* parent = nullptr);
     virtual ~Heroe();
 
     // Métodos para gestionar la entrada del teclado
@@ -23,11 +29,14 @@ public:
     // Métodos de estado del héroe
     void actualizarEstadoHeroe();
 
+    void colisionCon(Item* otroItem) override;
+    void colisionConSuelo();
+
     // Métodos getters y setters para vida y energía
     int getVida() const;
-    void setVida(int nuevaVida);
-
     int getEnergia() const;
+
+    void setVida(int nuevaVida);
     void setEnergia(int nuevaEnergia);
 
 private:

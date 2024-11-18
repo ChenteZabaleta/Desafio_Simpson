@@ -17,7 +17,13 @@ enum class EstadoColision {
 class Item : public QGraphicsPixmapItem {
 public:
     // Constructor
-    Item(int id, const QPointF& pos, const QRectF& geom, float masa, const QString& spritePath, bool vis = true, QGraphicsItem* parent = nullptr);
+    Item(int id,
+         const QPointF& pos,
+         const QRectF& geom,
+         float masa,
+         const QString& spritePath,
+         bool vis = true,
+         QGraphicsItem* parent = nullptr);
 
     // Destructor virtual
     virtual ~Item();
@@ -42,7 +48,9 @@ public:
     void setEstadoColision(EstadoColision estado);
 
     // Métodos funcionales
-    virtual void interactuarCon(class Bart* heroe) = 0; // Método puro virtual para la interacción específica
+    // Método puro virtual para manejar colisiones específicas
+    virtual void colisionCon(Item* otroItem) = 0;
+
     QRectF boundingRect() const override;
 
 protected:

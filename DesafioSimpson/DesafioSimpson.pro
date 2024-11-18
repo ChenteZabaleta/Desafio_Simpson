@@ -16,6 +16,8 @@ SOURCES += \
     personaje.cpp
 
 HEADERS += \
+    constantes.h \
+    fisica.h \
     heroe.h \
     item.h \
     mainwindow.h \
@@ -33,3 +35,6 @@ CONFIG += embed_translations
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc

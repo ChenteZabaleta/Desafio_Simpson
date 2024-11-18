@@ -81,6 +81,7 @@ void Item::setEstadoColision(EstadoColision estado) {
     estadoColision = estado;
 }
 
+
 // Método para obtener los límites de colisión
 QRectF Item::boundingRect() const {
     return geometria;

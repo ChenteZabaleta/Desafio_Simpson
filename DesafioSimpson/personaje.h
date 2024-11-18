@@ -19,7 +19,7 @@ public:
     void aplicarGravedad(float dt);
     void actualizarFriccion(float dt);
     void actualizarPosicion(float dt);
-    void colisionarConSuelo();
+    // void colisionarConSuelo(); //Sin definir aún.
 
     // Métodos de estado
     void actualizarEstado();
@@ -35,6 +35,8 @@ public:
     float getFuerzaSalto() const;
     float getFriccion() const;
     float getVelocidadMax() const;
+    float getVelocidadMin() const;
+    int getDireccion() const;
 
     //Métodos setters
     void setVelocidadX(float nuevaVelocidadX);
@@ -44,7 +46,12 @@ public:
     void setFuerzaSalto(float nuevaFuerzaSalto);
     void setFriccion(float nuevaFriccion);
     void setVelocidadMax(float nuevaVelocidadMax);
+    void setDireccion(int nuevaDireccion);
+    void setVelocidadMin(float nuevaVelocidadMin);
 
+
+    bool getEnSuelo() const;
+    void setEnSuelo(bool nuevoEnSuelo);
 
 private:
     // Atributos de físicas
@@ -55,6 +62,7 @@ private:
     float masa;
     float fuerzaSalto;
     float friccion;
+    float velocidadMin;
     float velocidadMax;
 
     // Estados

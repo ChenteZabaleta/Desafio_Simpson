@@ -1,5 +1,5 @@
 #include "personaje.h"
-
+#include "constantes.h"
 // Constructor
 Personaje::Personaje(int id,
                      const QPointF& pos,
@@ -11,11 +11,12 @@ Personaje::Personaje(int id,
     velocidadX(0),
     velocidadY(0),
     aceleracionX(0),
-    aceleracionY(9.8),
+    aceleracionY(9.8f),
     masa(masa),
-    fuerzaSalto(300),
-    friccion(0.9),
-    velocidadMax(200),
+    fuerzaSalto(FUERZA_SALTO),//Fuerza del salto en nuevaton, modificar al tanteo
+    friccion(FRICCION),   //Modificar valor entre 0 y 1.0
+    velocidadMin(VELOCIDAD_MINIMA),
+    velocidadMax(VELOCIDAD_MAXIMA),
     enSuelo(false),
     enMovimiento(false),
     saltando(false),
@@ -126,14 +127,47 @@ void Personaje::setVelocidadMax(float nuevaVelocidadMax)
     velocidadMax = nuevaVelocidadMax;
 }
 
+float Personaje::getVelocidadMin() const
+{
+    return velocidadMin;
+}
+
+void Personaje::setVelocidadMin(float nuevaVelocidadMin)
+{
+    velocidadMin = nuevaVelocidadMin;
+}
+
+bool Personaje::getEnSuelo() const
+{
+    return enSuelo;
+}
+
+void Personaje::setEnSuelo(bool nuevoEnSuelo)
+{
+    enSuelo = nuevoEnSuelo;
+}
+
+int Personaje::getDireccion() const
+{
+    return direccion;
+}
+
+void Personaje::setDireccion(int nuevaDireccion)
+{
+    direccion =nuevaDireccion;
+}
+
 // Físicas
 void Personaje::aplicarGravedad(float dt) {
     if (!enSuelo) {
         velocidadY += aceleracionY * dt;
     }
+    else {
+        velocidadY = 0;
+    }
 }
 
-void Personaje::actualizarFriccion(float dt) {
+void Personaje::actualizarFriccion(float dt) {//dt aún sin usar!!
     if (enSuelo && velocidadX != 0) {
         velocidadX *= friccion;
         if (abs(velocidadX) < 0.1) {
