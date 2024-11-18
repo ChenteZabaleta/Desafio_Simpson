@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hit_barto.png</file>
+        <file>skate4.png</file>
+        <file>skate5.png</file>
+        <file>skate6.png</file>
+        <file>skate7.png</file>
+    </qresource>
+</RCC>
