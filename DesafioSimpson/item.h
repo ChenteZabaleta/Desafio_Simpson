@@ -19,7 +19,6 @@ public:
     // Constructor
     Item(int id,
          const QPointF& pos,
-         const QRectF& geom,
          float masa,
          const QString& spritePath,
          bool vis = true,
@@ -28,7 +27,7 @@ public:
     // Destructor virtual
     virtual ~Item();
 
-    // Métodos para acceder y modificar atributos
+    // Métodos getter y setter
     int getID() const;
     QPointF getPosicion() const;
     QRectF getGeometria() const;
@@ -51,17 +50,19 @@ public:
     // Método puro virtual para manejar colisiones específicas
     virtual void colisionCon(Item* otroItem) = 0;
 
+    // Rectángulo delimitador del sprite
     QRectF boundingRect() const override;
 
 protected:
-    int ID;                      // Identificador único del ítem
-    QPointF posicion;            // Posición del ítem
-    QRectF geometria;            // Geometría para colisiones
-    float masa;                  // Masa del ítem
-    QString sprite;              // Ruta del sprite
-    bool visible;                // Estado de visibilidad
-    bool destruir;               // Si el ítem debe ser destruido
-    EstadoColision estadoColision; // Estado de colisión
+    int ID;                         // Identificador único del ítem
+    QPointF posicion;               // Posición del ítem
+    QRectF geometria;               // Geometría para colisiones
+    float masa;                     // Masa del ítem
+    QString rutaSprite;             // Ruta del sprite
+    QPixmap sprite;                 // imagen del sprite
+    bool visible;                   // Estado de visibilidad
+    bool destruir;                  // Si el ítem debe ser destruido
+    EstadoColision estadoColision;  // Estado de colisión
 };
 
 #endif // ITEM_H

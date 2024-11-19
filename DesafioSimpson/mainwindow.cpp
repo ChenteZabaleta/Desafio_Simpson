@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     timer = new QTimer(this);
 
     // Crear el héroe y agregarlo a la escena
-    heroe = new Heroe(1, QPointF(100, 100), QRectF(0, 0, 135, 150), 70.0, "://hit_barto.png");
+    heroe = new Heroe(1, QPointF(100, 100), 70.0, "://hit_barto.png");
     heroe->setGeometria(heroe->boundingRect());
     scene->addItem(heroe);
 

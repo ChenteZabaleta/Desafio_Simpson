@@ -3,11 +3,10 @@
 // Constructor
 Personaje::Personaje(int id,
                      const QPointF& pos,
-                     const QRectF& geom,
                      float masa,
                      const QString& spritePath,
                      bool vis, QGraphicsItem* parent)
-    : Item(id, pos, geom, masa, spritePath, vis, parent),
+    : Item(id, pos, masa, spritePath, vis, parent),
     velocidadX(0),
     velocidadY(0),
     aceleracionX(0),

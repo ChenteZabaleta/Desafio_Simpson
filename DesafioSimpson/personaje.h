@@ -6,7 +6,12 @@
 class Personaje : public Item {
 public:
     // Constructor y destructor
-    Personaje(int id, const QPointF& pos, const QRectF& geom, float masa, const QString& spritePath, bool vis = true, QGraphicsItem* parent = nullptr);
+    Personaje(int id,
+              const QPointF& pos,
+              float masa,
+              const QString& spritePath,
+              bool vis = true,
+              QGraphicsItem* parent = nullptr);
     virtual ~Personaje();
 
     // Métodos de movimiento

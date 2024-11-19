@@ -6,20 +6,13 @@
 // Constructor
 Heroe::Heroe(int id,
              const QPointF& pos,
-             const QRectF& geom,
              float masa,
              const QString& spritePath,
              bool vis,
              QGraphicsItem* parent)
-    : Personaje(id, pos, geom, masa, spritePath, vis, parent),
+    : Personaje(id, pos, masa, spritePath, vis, parent),
     vida(100), energia(100), herramientaActual(0), inventarioAbierto(false) {
 
-    QPixmap pixmap(spritePath);
-    if (!pixmap.isNull()) {
-        setPixmap(pixmap);  // Establecer el sprite principal
-    } else {
-        qDebug() << "No se pudo cargar la imagen del héroe: " << spritePath;
-    }
 }
 
 // Destructor

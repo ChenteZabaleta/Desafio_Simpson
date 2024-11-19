@@ -10,7 +10,6 @@ public:
     // Constructor y destructor
     Heroe(int id,
           const QPointF& pos,
-          const QRectF& geom,
           float masa,
           const QString& spritePath,
           bool vis = true,
