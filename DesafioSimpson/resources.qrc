@@ -1,9 +1,14 @@
 <RCC>
-    <qresource prefix="/">
-        <file>hit_barto.png</file>
-        <file>skate4.png</file>
-        <file>skate5.png</file>
-        <file>skate6.png</file>
-        <file>skate7.png</file>
+    <qresource prefix="/consumibles">
+        <file>src/img/consumibles/baterias.png</file>
+        <file>src/img/consumibles/canicas.png</file>
+        <file>src/img/consumibles/donas.png</file>
+        <file>src/img/consumibles/llave.png</file>
+        <file>src/img/consumibles/KrustyBurger.png</file>
+    </qresource>
+    <qresource prefix="/herramientas">
+        <file>src/img/herramientas/linterna.png</file>
+        <file>src/img/herramientas/patineta.png</file>
+        <file>src/img/herramientas/tirachinas.png</file>
     </qresource>
 </RCC>
