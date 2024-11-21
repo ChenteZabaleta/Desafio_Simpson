@@ -57,6 +57,7 @@ public:
         QString spritePath ="",
         bool visible = true,
         bool destruir = false,
+        bool solido = false,
         float dt = 0.016 // Frecuencia de refresco de la pantalla para 60fps.
         );
 
@@ -68,6 +69,7 @@ public:
     QPixmap getSprite() const;
     bool isVisible() const;
     bool isDestruir() const;
+    bool getSolido() const;
     float getDeltaTime() const;
 
     //Métodos setters
@@ -78,6 +80,7 @@ public:
     void setSprite(const QPixmap &spr);
     void setVisible(bool vis);
     void setDestruir(bool des);
+    void setSolido(bool nuevoSolido);
     void setDeltaTime(float delta);
 
 
@@ -85,6 +88,9 @@ public:
     // Métodos adicionales
     QRectF boundingRect() const override;
     virtual void actualizar(float deltaTime);
+    void cambiarSprite(QString nuevoSpritePath);
+
+
 
 protected:
     TipoObjeto tipo;
@@ -94,7 +100,9 @@ protected:
     QPixmap sprite;
     bool visible;
     bool destruir;
+    bool solido;
     float dt;
+
 };
 
 #endif // ENTIDAD_H

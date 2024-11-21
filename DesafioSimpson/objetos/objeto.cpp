@@ -1,14 +1,14 @@
 #include "objeto.h"
 
-Objeto::Objeto(
-    TipoObjeto tipo,
-    QPointF posicion,
-    QRectF geometria,
-    QString spritePath,
-    bool visible,
-    bool destruir,
-    float dt
-    ) : Entidad(tipo, posicion, geometria, spritePath, visible, destruir, dt),
+Objeto::Objeto(TipoObjeto tipo,
+               QPointF posicion,
+               QRectF geometria,
+               QString spritePath,
+               bool visible,
+               bool destruir,
+               bool solido,
+               float dt
+               ) : Entidad(tipo, posicion, geometria, spritePath, visible, destruir, solido, dt),
     consumido(false) {}
 
 TipoObjeto Objeto::colisionConBart() {

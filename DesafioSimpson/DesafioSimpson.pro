@@ -20,7 +20,13 @@ SOURCES += \
     objetos/herramientas/linterna.cpp \
     objetos/herramientas/patineta.cpp \
     objetos/herramientas/tirachinas.cpp \
-    objetos/objeto.cpp
+    objetos/objeto.cpp \
+    objetos/obstaculos/alcantarilla.cpp \
+    objetos/obstaculos/muro.cpp \
+    objetos/obstaculos/piso.cpp \
+    objetos/obstaculos/plataforma.cpp \
+    objetos/obstaculos/puerta.cpp \
+    objetos/obstaculos/rampa.cpp
 
 HEADERS += \
     entidad.h \
@@ -33,7 +39,13 @@ HEADERS += \
     objetos/herramientas/linterna.h \
     objetos/herramientas/patineta.h \
     objetos/herramientas/tirachinas.h \
-    objetos/objeto.h
+    objetos/objeto.h \
+    objetos/obstaculos/alcantarilla.h \
+    objetos/obstaculos/muro.h \
+    objetos/obstaculos/piso.h \
+    objetos/obstaculos/plataforma.h \
+    objetos/obstaculos/puerta.h \
+    objetos/obstaculos/rampa.h
 
 FORMS += \
     mainwindow.ui

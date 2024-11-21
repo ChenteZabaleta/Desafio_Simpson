@@ -12,6 +12,7 @@ public:
         QString spritePath = "",
         bool visible = true,
         bool destruir = false,
+        bool solido = false,
         float dt = 0.016
         );
 

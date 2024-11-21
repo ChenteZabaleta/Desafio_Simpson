@@ -7,6 +7,7 @@ Entidad::Entidad(
     QString spritePath,
     bool visible,
     bool destruir,
+    bool solido,
     float dt
     ) : tipo(tipo),
     posicion(posicion),
@@ -15,6 +16,7 @@ Entidad::Entidad(
     sprite(QPixmap(spritePath)),
     visible(visible),
     destruir(destruir),
+    solido(solido),
     dt(dt) {}
 
 // Getters
@@ -25,6 +27,7 @@ QString Entidad::getRutaSprite() const { return rutaSprite; }
 QPixmap Entidad::getSprite() const { return sprite; }
 bool Entidad::isVisible() const { return visible; }
 bool Entidad::isDestruir() const { return destruir; }
+bool Entidad::getSolido() const { return solido; }
 float Entidad::getDeltaTime() const { return dt; }
 
 // Setters
@@ -35,6 +38,7 @@ void Entidad::setRutaSprite(const QString &ruta) { this->rutaSprite = ruta; this
 void Entidad::setSprite(const QPixmap &spr) { this->sprite = spr; }
 void Entidad::setVisible(bool vis) { this->visible = vis; }
 void Entidad::setDestruir(bool des) { this->destruir = des; }
+void Entidad::setSolido(bool nuevoSolido) { solido = nuevoSolido; }
 void Entidad::setDeltaTime(float delta) { this->dt = delta; }
 
 QRectF Entidad::boundingRect() const { return sprite.rect(); }
@@ -43,3 +47,10 @@ void Entidad::actualizar(float deltaTime) {
     dt = deltaTime;
     if (!visible) { destruir = true;}
 }
+
+void Entidad::cambiarSprite(QString nuevoSpritePath)
+{
+
+}
+
+
