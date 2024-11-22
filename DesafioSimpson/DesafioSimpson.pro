@@ -13,6 +13,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     objetoFisico/objetofisico.cpp \
+    objetoFisico/personaje/personaje.cpp \
     objetoFisico/proyectil/pCanica.cpp \
     objetoFisico/proyectil/pHacha.cpp \
     objetoFisico/proyectil/pVenda.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     entidad.h \
     mainwindow.h \
     objetoFisico/objetofisico.h \
+    objetoFisico/personaje/personaje.h \
     objetoFisico/proyectil/pCanica.h \
     objetoFisico/proyectil/pHacha.h \
     objetoFisico/proyectil/pVenda.h \

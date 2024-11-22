@@ -12,7 +12,17 @@ Proyectil::Proyectil(
     QPointF velocidad,
     QPointF aceleracion,
     float coefElasticidad
-    ) : ObjetoFisico(posicion, geometria, spritePath, visible, destruir, dt, masa, velocidad, aceleracion, coefElasticidad) {}
+    ) : ObjetoFisico(
+          posicion,
+          geometria,
+          spritePath,
+          visible,
+          destruir,
+          dt,
+          masa,
+          velocidad,
+          aceleracion,
+          coefElasticidad) {}
 
 void Proyectil::actualizar(float deltaTime) {
     // Actualización de la física del proyectil
