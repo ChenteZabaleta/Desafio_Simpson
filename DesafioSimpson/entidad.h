@@ -21,7 +21,10 @@ enum class TipoObjeto {
     Tirachinas,
     Linterna,
     // Obtaculos
+    Alcantarilla,
     Muro,
+    Piso,
+    Plataforma,
     Puerta,
     Rampa,
     // Proyectiles

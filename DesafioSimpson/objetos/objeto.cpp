@@ -16,7 +16,7 @@ TipoObjeto Objeto::colisionConBart() {
         consumido = true;
         setVisible(false);  // Oculta el objeto
         setDestruir(true);  // Marca el objeto para ser destruido
-        return getTipo();   // Devuelve el tipo del objeto consumido
+        return getTipo();   // Devuelve el tipo del objeto colisionado
     }
     return TipoObjeto::Generico; // Devuelve un tipo genérico si ya fue consumido
 }

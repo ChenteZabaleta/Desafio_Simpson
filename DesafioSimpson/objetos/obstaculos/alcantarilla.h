@@ -2,9 +2,9 @@
 #define ALCANTARILLA_H
 
 
-#include "objetos/objeto.h"
+#include "objetos/obstaculos/obstaculo.h"
 
-class Alcantarilla : public Objeto {
+class Alcantarilla : public Obstaculo {
 public:
     Alcantarilla(
         QPointF posicion = QPointF(0, 0),
@@ -12,16 +12,11 @@ public:
         QString spritePath = ":/resources/images/alcantarilla.png",
         bool visible = true,
         bool destruir = false,
-        bool bloqueaMovimiento = true,
+        bool solido = true,
         float dt = 0.016
         );
 
-    void actualizar(float deltaTime) override;
-    bool esSolido() const override;
-    void colisionConPersonaje(); // No destruye, pero podría activar algo
-
-private:
-    bool bloqueaMovimiento; // Indica si la alcantarilla bloquea el paso
+    void actualizar(float deltaTime) override; // Actualiza el estado específico de Alcantarilla
 };
 
 #endif // ALCANTARILLA_H

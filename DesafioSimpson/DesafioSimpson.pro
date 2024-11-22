@@ -12,6 +12,11 @@ SOURCES += \
     entidad.cpp \
     main.cpp \
     mainwindow.cpp \
+    objetoFisico/objetofisico.cpp \
+    objetoFisico/proyectil/pCanica.cpp \
+    objetoFisico/proyectil/pHacha.cpp \
+    objetoFisico/proyectil/pVenda.cpp \
+    objetoFisico/proyectil/proyectil.cpp \
     objetos/consumibles/baterias.cpp \
     objetos/consumibles/canicas.cpp \
     objetos/consumibles/dona.cpp \
@@ -23,6 +28,7 @@ SOURCES += \
     objetos/objeto.cpp \
     objetos/obstaculos/alcantarilla.cpp \
     objetos/obstaculos/muro.cpp \
+    objetos/obstaculos/obstaculo.cpp \
     objetos/obstaculos/piso.cpp \
     objetos/obstaculos/plataforma.cpp \
     objetos/obstaculos/puerta.cpp \
@@ -31,6 +37,11 @@ SOURCES += \
 HEADERS += \
     entidad.h \
     mainwindow.h \
+    objetoFisico/objetofisico.h \
+    objetoFisico/proyectil/pCanica.h \
+    objetoFisico/proyectil/pHacha.h \
+    objetoFisico/proyectil/pVenda.h \
+    objetoFisico/proyectil/proyectil.h \
     objetos/consumibles/baterias.h \
     objetos/consumibles/canicas.h \
     objetos/consumibles/dona.h \
@@ -42,6 +53,7 @@ HEADERS += \
     objetos/objeto.h \
     objetos/obstaculos/alcantarilla.h \
     objetos/obstaculos/muro.h \
+    objetos/obstaculos/obstaculo.h \
     objetos/obstaculos/piso.h \
     objetos/obstaculos/plataforma.h \
     objetos/obstaculos/puerta.h \
