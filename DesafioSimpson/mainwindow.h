@@ -6,7 +6,6 @@
 #include <QGraphicsView>
 #include <QTimer>
 #include <QKeyEvent>
-#include "heroe.h" // Incluye la clase Heroe
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,17 +22,11 @@ public:
     ~MainWindow();
 
 protected:
-    void keyPressEvent(QKeyEvent *event) override; // Detectar teclas presionadas
-    void keyReleaseEvent(QKeyEvent *event) override; // Detectar teclas liberadas
+    // contenido protegido
 
 private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
-    QTimer* timer;
 
-    Heroe* heroe; // Referencia al héroe
-
-    void agregarObjeto(QPoint pos, const QString &rutaImagen);
-    void crearEscena();
 };
 #endif // MAINWINDOW_H

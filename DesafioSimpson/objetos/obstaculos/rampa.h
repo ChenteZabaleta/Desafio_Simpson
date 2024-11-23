@@ -1,0 +1,21 @@
+#ifndef RAMPA_H
+#define RAMPA_H
+
+#include "obstaculo.h"
+
+class Rampa : public Obstaculo {
+public:
+    Rampa(
+        QPointF posicion = QPointF(0, 0),
+        QRectF geometria = QRectF(0, 0, 10, 10),
+        QString spritePath = ":/resources/images/rampa.png",
+        bool visible = true,
+        bool destruir = false,
+        bool solido = true,
+        float dt = 0.016
+        );
+
+    void actualizar(float deltaTime) override; // Actualiza el estado específico de Rampa
+};
+
+#endif // RAMPA_H
